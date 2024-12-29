@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant", serif;
+    color: white;
+}
+
+.cormorant {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Apply dark mode styles globally */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    color: #1e90ff; /* Optional: Make links stand out */
+}
+
+/* Button styling */
+
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    position: relative; /* Position relative to enable absolute positioning of pseudo-element */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+    text-decoration: none; /* Ensure no default text decoration */
+}
+
+    /* Button hover effect - underline */
+    button::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 1px; /* Thickness of the underline */
+        background-color: #f5f5dc; /* Warm cream color */
+        transition: width 0.3s ease; /* Smooth transition for underline */
+    }
+
+    /* Hover state for button */
+    button:hover::after {
+        width: 100%; /* Expand the underline on hover */
+    }
+
+    button:hover {
+        background-color: transparent; /* Ensure the background remains transparent */
+        cursor: pointer; /* Change cursor to indicate interactivity */
+    }
+
+
+input, textarea {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    height: 5vh;
+}
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav {
+    flex-direction: row; /* Make nav items horizontal */
+}
+
+.navbar-toggler {
+    margin-left: auto; /* Push burger button to right */
+}
+
+.offcanvas-start {
+    width: 250px; /* Control the offcanvas width */
+}
+
+/* Remove nav-link underline animation */
+a, .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* Remove default blue color for all <a> tags */
+a {
+    color: inherit;
+}
+
+
+
+/* Remove underline animation for nav-links */
+.nav-link {
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.nav-item {
+    margin-bottom: 6px;
+    margin-right: 2px;
+}
+
+.inverted {
+    background-color: white;
+}
+
+/* Home page */
