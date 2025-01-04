@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Cormorant", serif;
     color: white;
+    user-select: none; /* Disable text selection */
 }
 
 .cormorant {
@@ -26,40 +27,37 @@ a {
     color: #1e90ff; /* Optional: Make links stand out */
 }
 
-/* Button styling */
-
-button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 1rem;
-    position: relative; /* Position relative to enable absolute positioning of pseudo-element */
-    transition: background-color 0.3s ease; /* Smooth transition for background */
-    text-decoration: none; /* Ensure no default text decoration */
+/* CSS */
+.button-89 {
+    --b: 1.7px; /* border thickness */
+    --s: .3em; /* size of the corner */
+    --color: white;
+    padding: calc(.2em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-    /* Button hover effect - underline */
-    button::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 1px; /* Thickness of the underline */
-        background-color: #f5f5dc; /* Warm cream color */
-        transition: width 0.3s ease; /* Smooth transition for underline */
-    }
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
 
-    /* Hover state for button */
-    button:hover::after {
-        width: 100%; /* Expand the underline on hover */
-    }
+.button-89:active {
+    background: var(--color);
+    color: #fff;
+}/* Button styling */
 
-    button:hover {
-        background-color: transparent; /* Ensure the background remains transparent */
-        cursor: pointer; /* Change cursor to indicate interactivity */
-    }
 
 
 input, textarea {
@@ -85,14 +83,6 @@ nav {
 
 .navbar-nav {
     flex-direction: row; /* Make nav items horizontal */
-}
-
-.navbar-toggler {
-    margin-left: auto; /* Push burger button to right */
-}
-
-.offcanvas-start {
-    width: 250px; /* Control the offcanvas width */
 }
 
 /* Remove nav-link underline animation */

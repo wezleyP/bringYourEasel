@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - bringYourEasel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/homeTwo.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/bringYourEasel.styles.css" asp-append-version="true" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +20,13 @@
     <header>
         <nav class="navbar navbar-expand-sm ">
             <div class="container-fluid">
-                <button class="navButton">
+                <p class="headerbutton">
                     bringtheasel
-                </button>
+                </p>
                 <div>
-                    <button class="navButton">
-                        my work
-                    </button>
+                    <p class="headerbutton">
+                        contact us
+                    </p>
                 </div>
             </div>
         </nav>
@@ -42,6 +43,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/anime.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

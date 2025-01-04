@@ -1,10 +1,13 @@
-﻿.homePage {
+﻿
+
+
+
+/*HomePages*/
+
+.homePage, homePageTwo {
     margin: 0;
     padding: 0;
     height: 100vh;
-}
-
-.homePage {
     position: relative;
     overflow: hidden;
     color: white;
@@ -24,26 +27,22 @@
         z-index: 1; /* Ensure it stays behind the content */
     }
 
-.homePageTwo {
-    position: relative;
-    overflow: hidden;
-    color: white;
+.heroListText {
+    
 }
 
-    /* Add the background image with opacity */
-    .homePageTwo::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('/assets/BTE Tree (2).png') no-repeat center center;
-        background-size: contain; /* Adjust size to fit the container */
-        opacity: 0.2; /* Set the transparency of the image */
-        z-index: 1; /* Ensure it stays behind the content */
-    }
+.container, .row, .col {
+    position: relative;
+    z-index: 2; /* Content inside sections should be clickable */
+}
 
+/* Fix for buttons and other interactive elements */
+button, img, a {
+    position: relative;
+    z-index: 3; /* Ensure interactive elements are above everything */
+}
+
+/*HomePage main circle object and text*/ 
 
 .circle-text {
     position: relative;
@@ -51,7 +50,6 @@
     justify-content: center;
     align-items: center;
     height: 100%; /* Center the element vertically */
-    background-color: #000; /* Optional: dark background */
 }
 
 svg {
@@ -70,7 +68,6 @@ svg {
     animation: rotate 45s linear infinite;
 }
 
-/* Center the image inside the circular text */
 .circle-image {
     position: absolute;
     width: 100px; /* Adjust size */
@@ -80,32 +77,9 @@ svg {
     z-index: 0; /* Place image below the text */
 }
 
+
 /* myWork */
 
-
-.mywork-image {
-    width: 100%; /* Makes the image fill the width of the container */
-    height: 100%; /* Makes the image fill the height of the container */
-    object-fit: cover; /* Ensures the image scales and crops to fit the space */
-    display: block;
-    opacity: .8;
-}
-
-.myWorkLeft, .myWorkRight {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures any overflowing parts of the image are hidden */
- /* Optional: Add a background color for better visuals */
-}
-
-.work-image {
-    width: 100%; /* Makes the image fill the width of the container */
-    height: 100%; /* Makes the image fill the height of the container */
-    object-fit: cover; /* Ensures the image scales and crops to fit the space */
-    display: block;
-    opacity: .9;
-}
 
 
 .mybutton {
